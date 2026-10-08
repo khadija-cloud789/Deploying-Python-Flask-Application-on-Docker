@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jira Ticket Creation</title>
+</head>
+<body>
+    <h2>Jira Ticket Creation</h2>
+    <form method="post" action="/jira_create">
+        
+        <p>Project: 
+            <select name="project" required>
+                <option value="JWP">JWP - Jira Web Project</option>
+            </select>
+        </p>
+
+        <p>Issue Type: 
+            <select name="issuetype" required>
+                <option value="Task">Task</option>
+                <option value="Bug">Bug</option>
+                <option value="Story">Story</option>
+            </select>
+        </p>
+
+        <p>Summary: <input type="text" name="summary" required placeholder="Enter the summary"></p>
+        <p>Description: <textarea name="desc" required placeholder="Enter the description"></textarea></p>
+        
+        <p>Priority: 
+            <select name="priority" required>
+                <option value="Highest">Highest</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </p>
+
+        <input type="submit" value="Create Ticket">
+    </form>
+</body>
+</html>

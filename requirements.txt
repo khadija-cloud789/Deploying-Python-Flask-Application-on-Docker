@@ -1,0 +1,6 @@
+Flask
+Flask-MySQL==1.5.2
+Flask-MySQLdb
+pymysql
+jira
+requests

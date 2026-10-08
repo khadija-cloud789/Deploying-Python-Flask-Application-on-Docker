@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Register Page</title></head>
+<body>
+    <h2>Register Page</h2>
+    <form method="post" action="/create_account">
+        <p>Username: <input type="text" name="username" required></p>
+        <p>Password: <input type="password" name="password" required></p>
+        <p>Email: <input type="email" name="email" required></p>
+        <p><input type="submit" value="Register"></p>
+    </form>
+    <div style="color:red;">{{ msg }}</div>
+    <p><a href="/login_page">Already have an account? Login here</a></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: your_mysql_rootpass
+      MYSQL_DATABASE: alnafi
+      MYSQL_USER: your_mysql_user
+      MYSQL_PASSWORD: your_mysql_pass
+    volumes:
+      - ./db/alnafi.sql:/docker-entrypoint-initdb.d/alnafi.sql:ro
+      - mysql_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  mysql_data:

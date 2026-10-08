@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Trainer Details</title></head>
+<body>
+    <h2>Trainer Details</h2>
+    <form method="post" action="/trainer_create">
+        <p>First Name: <input type="text" name="fname" required></p>
+        <p>Last Name: <input type="text" name="lname" required></p>
+        <p>Designation: <input type="text" name="design" required></p>
+        <p>Course: 
+            <select name="course">
+                <option value="DevOps Advancement Track">DevOps Advancement Track</option>
+                <option value="Linux">Linux</option>
+                <option value="AI">AI</option>
+                <option value="Python">Python</option>
+            </select>
+        </p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
+</html>

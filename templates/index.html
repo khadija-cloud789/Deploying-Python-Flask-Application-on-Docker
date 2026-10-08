@@ -1,0 +1,15 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/trainer">Alnafi Tsheet</a></li>
+        <li><a href="/jira">Jira</a></li>
+        
+        <!-- Session Logic -->
+        {% if session.loggedin %}
+            <li><a href="#">Welcome, {{ session.username }}</a></li>
+            <li><a href="/logout">Logout</a></li>
+        {% else %}
+            <li><a href="/login_page">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        {% endif %}
+    </nav>
